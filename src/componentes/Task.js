@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Grid,
-  Typography,
-  Box,
-  Button
+  Typography
 } from '@material-ui/core';
 import Tabs from '@material-ui/core/Tabs';
 import { makeStyles } from '@material-ui/core/styles';

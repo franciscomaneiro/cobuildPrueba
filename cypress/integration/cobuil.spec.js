@@ -10,6 +10,8 @@
 context('Actions', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000')
+        cy.wait(3000)
+        cy.url().should('contain', 'https://606258015ada240007bd5979.auth.us-east-1.amazoncognito.com')
         cy.wait(5000)
         cy.get('#signInFormUsername')
             .type('franciscomaneiro97@gmail.com').should('have.value', 'franciscomaneiro97@gmail.com')
