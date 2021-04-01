@@ -73,6 +73,15 @@ export default function NuevaTask(props) {
                   Guardar
                 </Button>
               </Box>
+              <Box
+                display="flex"
+                justifyContent="flex-end"
+                pt={3}
+              >
+                <Button variant="contained" onClick={props.logoutFun} type="button" color="primary">
+                  Salir
+                </Button>
+              </Box>
             </Grid>
 
           </form>

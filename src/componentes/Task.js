@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {
   Grid,
-  Typography
+  Typography,
+  Box,
+  Button
 } from '@material-ui/core';
 import Tabs from '@material-ui/core/Tabs';
 import { makeStyles } from '@material-ui/core/styles';
@@ -35,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Task() {
+export default function Task(props) {
   //Get task, se encarga de traer los datos de la tabla task
   //El refetch se utiliza para llamarla de nuevo una vez
   //Ocurra un insertar/editar/eliminar
@@ -153,7 +155,7 @@ export default function Task() {
             Nueva tarea
       		</Typography>
           {/* NuevaTask es el formulario de insertar task */}
-          <NuevaTask newTask={newTask} loadingState={setLoading} refetchFun={setIsRefetch} />
+          <NuevaTask newTask={newTask} logoutFun={props.logoutFunction} loadingState={setLoading} refetchFun={setIsRefetch} />
         </Grid>
         <Grid
           item
